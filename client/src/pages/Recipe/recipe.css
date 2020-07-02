@@ -1,0 +1,14 @@
+.recipe-page {
+    display: flex;
+}
+.recipe-page>.details {
+    flex: 4.5;
+}
+.recipe-page>.extras {
+    flex: 5.5;
+}
+.recipe-page>.extras>img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}

@@ -13,7 +13,7 @@ query{
         likes
         instructions
         createDate
-        
+        image
     }
 }
 `;

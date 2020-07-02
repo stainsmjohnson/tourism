@@ -9,6 +9,7 @@ type Recipe {
     createDate: String
     likes: Int
     username: String
+    image: String
 }
 
 

@@ -2,6 +2,8 @@ import React from 'react'
 import { Query } from 'react-apollo';
 import { GET_ALL_RECIPES } from '../../queries';
 import { Link } from 'react-router-dom';
+import RecipeComponent from '../../components/Recipe';
+import './home.css';
 
 const Home = () => {
     return (
@@ -12,11 +14,11 @@ const Home = () => {
                     if(loading) return <h1>Loading</h1>
                     if(error) return <h1>Error</h1>
                     return (
-                    <ul>
+                    <ul className="recipes-container">
                         {
                             data.getAllRecipes.map(recipe => (
                                 <Link key={recipe._id} to={`/recipe/${recipe._id}`}>
-                                    <p>{recipe.name}</p>
+                                    <RecipeComponent {...recipe}/>
                                 </Link>
                             ))
                         }
